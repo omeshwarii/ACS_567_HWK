@@ -61,10 +61,18 @@ class ApplicationDriver:
         earning_members = int(input("Enter Number of Earning Members: "))
 
         new_data = ExpenseData(income, expense, members, emi_or_rent, annual_income, education, earning_members)
-        DataManager().add_data(new_data)
 
-        print("\nData added successfully. Updated data:")
-        ApplicationDriver.display_data(DataManager().get_data())
+        # Checks for duplicates
+        existing_data = DataManager().get_data()
+        if any(entry.income == income and entry.expense == expense and entry.members == members
+               and entry.emi_or_rent == emi_or_rent and entry.annual_income == annual_income
+               and entry.education == education and entry.earning_members == earning_members
+               for entry in existing_data):
+            print("Duplicate entry. Data already exists.")
+        else:
+            DataManager().add_data(new_data)
+            print("\nData added successfully. Updated data:")
+            ApplicationDriver.display_data(DataManager().get_data())
 
     @staticmethod
     def analyze_data(data):
