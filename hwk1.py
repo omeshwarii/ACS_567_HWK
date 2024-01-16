@@ -62,7 +62,6 @@ class ApplicationDriver:
 
         new_data = ExpenseData(income, expense, members, emi_or_rent, annual_income, education, earning_members)
 
-        # Checks for duplicates
         existing_data = DataManager().get_data()
         if any(entry.income == income and entry.expense == expense and entry.members == members
                and entry.emi_or_rent == emi_or_rent and entry.annual_income == annual_income
