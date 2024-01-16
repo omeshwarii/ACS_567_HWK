@@ -29,6 +29,8 @@
 
 ## Requirements
 
-- Python 3.x
+- Python 3.12
 - pandas library
+- numpy
+- copy
 
