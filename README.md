@@ -6,7 +6,7 @@
    - View the current data in the csv file.
 
 2. **Add Data:**
-   - Add new expense data to the dataset.
+   - Add new expense data to the dataset. Duplicate data is not allowed.
 
 3. **Analyze Data:**
    - Calculate and display mean and median values for monthly household income and expenses.
