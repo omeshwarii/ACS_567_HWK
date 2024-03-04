@@ -1,5 +1,3 @@
-# HWK1
-
 ## Application Features
 
 1. **Read Data:**
